@@ -41,15 +41,10 @@ Please to run headless, use (it is necessary to close the UI test mode):
 npx cypress run
 ```
 
-Please to generate an allure report, use (it is necessary to run headless before this):
-```
-npm run report
-```
-
 Please to run on GitHub Action use this link:
 
 - https://github.com/morlfm/cy/actions/workflows/node.js.yml 
 
 Test Results:
 
-- 
+- https://dashboard.cypress.io/projects/inu11r/

@@ -9,8 +9,5 @@
     "testFiles": "**/*.*spec.*",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
-    "projectId": "inu11r",
-    "env": {
-        "allure": true
-    }
+    "projectId": "inu11r"
   }
