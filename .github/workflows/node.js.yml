@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       amb:
-        description: 'Select environment: development / homologation / production'
+        description: 'Select environment: development / production'
         required: false
         default: 'production'
       browser:
