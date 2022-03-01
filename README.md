@@ -26,6 +26,7 @@ npm i
 - allure  /  cypress report
 - webhooks to run pipeline
 - api tests in 2 ways
+- Tests results in a link but it could be on slack channel or so 
 
 
 ## Execution
@@ -48,3 +49,7 @@ npm run report
 Please to run on GitHub Action use this link:
 
 - https://github.com/morlfm/cy/actions/workflows/node.js.yml 
+
+Test Results:
+
+- 
