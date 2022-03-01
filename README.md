@@ -26,7 +26,7 @@ npm i
 - config files and view sizes and etc
 - allure  /  cypress report
 - webhooks to run pipeline
-
+- api tests in 2 ways
 
 
 ## Execution
