@@ -21,11 +21,10 @@ npm i
 
 ## Project Infos:
 
-- test failing 
-- config files and view sizes and etc
-- allure  /  cypress report
-- webhooks to run pipeline
-- api tests in 2 ways
+- Test: 'Should go through Featured Pokemnon'  failing because there is no Dewott on there
+- Config files are separeted just for ilustration , on them you could create different runs based on envs or another configs like viewportWidth / viewportHeight and etc.
+- We can create webhooks or so to run pipeline remotely
+- Api tests in 2 different ways
 - Tests results in a link but it could be on slack channel or so 
 
 
