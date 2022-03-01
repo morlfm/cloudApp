@@ -47,3 +47,4 @@ npm run report
 
 Please to run on GitHub Action use this link:
 
+- https://github.com/morlfm/cy/actions/workflows/node.js.yml 
