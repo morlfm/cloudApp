@@ -8,6 +8,7 @@ class Searchs {
     cy.contains('Name or Number')
     cy.get(el.searchBox).type('pikachu{enter}')
     cy.contains('Pikachu')
+    cy.get(el.animating).first().click({force: true})
     cy.should('have.attr', 'class', 'tt-suggestion tt-selectable')
   }
 
@@ -29,8 +30,8 @@ class Searchs {
     cy.contains('Name or Number')
     cy.get(el.searchBox).type('JigglyPuff{enter}').trigger('mouseover')
     cy.contains('Jigglypuff')
+    cy.get(el.animating).first().click({force: true})
     cy.should('have.attr', 'class', 'tt-suggestion tt-selectable')
-
   }
 }
 

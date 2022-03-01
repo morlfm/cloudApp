@@ -12,7 +12,7 @@ describe('Searchs', () => {
         searchs.SearchByName()
     })
     
-    it('Should Sort', () => {
+    it('Should Sort by Highest', () => {
         searchs.Sort()
     })
     
@@ -20,7 +20,7 @@ describe('Searchs', () => {
         searchs.FeaturedPokemon()   
     })    
 
-    it('Should Explore More', () => {
+    it.only('Should Explore More', () => {
         searchs.ExploreMore()
     })
 })

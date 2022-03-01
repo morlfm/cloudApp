@@ -10,7 +10,9 @@ export const ELEMENTS = {
     getHover: '[class="pokemon-info"]',
     search: '#search',
     highlight: '[class="loaded highlight"]',
-    value: '[data-option-value="numberDesc"]'
+    value: '[data-option-value="numberDesc"]',
+    animating: '[class="tt-suggestion tt-selectable"]'
+
   }
 
  
