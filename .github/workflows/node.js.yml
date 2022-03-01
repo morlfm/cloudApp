@@ -10,13 +10,13 @@ on:
       browser:
         description: 'Select browser: chrome / electron'
         required: false
-        default: 'electron'
+        default: 'chrome'
   pull_request:
     branches: [ master, release/develop ]
     
 env:
   DEFAULT_AMB: "production"
-  DEFAULT_BROWSER: "electron"
+  DEFAULT_BROWSER: "chrome"
 
 jobs:
   install:
