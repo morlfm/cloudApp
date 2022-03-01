@@ -19,6 +19,16 @@ Funcional test automation project using Cypress.
 npm i 
 ```
 
+
+## Project Infos:
+
+- test failing 
+- config files and view sizes and etc
+- allure  /  cypress report
+- webhooks to run pipeline
+
+
+
 ## Execution
 
 Please to open the UI test mode, use: 
