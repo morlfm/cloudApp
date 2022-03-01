@@ -13,5 +13,4 @@
     "description": "Test automation functional using Cypress.",
     "version": "1.0.0",
     "main": "index.js"
-  
 }
