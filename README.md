@@ -19,7 +19,6 @@ Funcional test automation project using Cypress.
 npm i 
 ```
 
-
 ## Project Infos:
 
 - test failing 

@@ -1,6 +1,6 @@
 {
     "testFiles": "**/*.*spec.*",
-    "baseUrl": "https://stagin-pokemon.com/us/",
+    "baseUrl": "https://staging-pokemon.com/us/",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
     "env": {
