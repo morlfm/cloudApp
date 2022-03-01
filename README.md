@@ -42,7 +42,8 @@ npx cypress run
 
 Please to run on GitHub Action use this link:
 
-- https://github.com/morlfm/cy/actions/workflows/node.js.yml 
+- https://github.com/luxurypresence/QA_Challenge/actions then go to my branch francisco.cypress.lux
+
 
 Test Results:
 
