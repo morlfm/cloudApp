@@ -12,13 +12,6 @@
     "name": "automation-functional-testing",
     "description": "Test automation functional using Cypress.",
     "version": "1.0.0",
-    "main": "index.js",
-    "scripts": {
-        "cy:run": "cypress run --config video=false --env allure=true",
-        "allure:report": "allure generate allure-results",
-        "allure:clear": "if exist allure-results rmdir /q /s allure-results && if exist allure-report rmdir /q /s allure-report",
-        "allure:open": "allure open allure-report",
-        "test": "npm-run-all allure:clear cy:run",
-        "report": "npm-run-all allure:report allure:open"
-    }
+    "main": "index.js"
+  
 }
