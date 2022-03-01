@@ -20,7 +20,7 @@ describe('Searchs', () => {
         searchs.FeaturedPokemon()   
     })    
 
-    it.only('Should Explore More', () => {
+    it('Should Explore More', () => {
         searchs.ExploreMore()
     })
 })
