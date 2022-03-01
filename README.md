@@ -42,7 +42,7 @@ npx cypress run
 
 Please to run on GitHub Action use this link:
 
-- https://github.com/luxurypresence/QA_Challenge/actions then go to my branch francisco.cypress.lux
+- https://github.com/luxurypresence/QA_Challenge/actions then go to my branch francisco.cypress.lux after branch is merged
 
 
 Test Results:
