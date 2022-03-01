@@ -3,6 +3,7 @@
     "baseUrl": "https://staging-pokemon.com/us/",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
+    "projectId": "inu11r",
     "env": {
         "allure": true
     }
