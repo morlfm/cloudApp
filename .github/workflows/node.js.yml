@@ -1,0 +1,59 @@
+name: cypress luxury
+
+on:
+  workflow_dispatch:
+    inputs:
+      amb:
+        description: 'Select environment: development / homologation / production'
+        required: false
+        default: 'production'
+      browser:
+        description: 'Select browser: chrome / electron'
+        required: false
+        default: 'electron'
+  pull_request:
+    branches: [ master, release/develop ]
+    
+env:
+  DEFAULT_AMB: "production"
+  DEFAULT_BROWSER: "electron"
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node14.17.0-chrome88-ff89
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress install
+        uses: cypress-io/github-action@v2
+        with:
+          runTests: false
+
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node14.16.0-chrome90-ff88
+    needs: install
+    strategy: 
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cypress run 
+        uses: cypress-io/github-action@v2
+        with: 
+          command: npx cypress run --config-file config/${{github.event.inputs.amb || env.DEFAULT_AMB}}.json --browser ${{github.event.inputs.browser || env.DEFAULT_BROWSER}}
+      
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
