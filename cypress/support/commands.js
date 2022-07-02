@@ -1,25 +1,22 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import { COMMONELEMENTS, LOGOUTELEMENTS, SIGNUPELEMENTS } from "./context/commons/elements";
+
+Cypress.Commands.add('login', (email, password) => { 
+  cy.get(COMMONELEMENTS.login).click({ force: true });
+  cy.get(COMMONELEMENTS.email).type(email);
+  cy.get(COMMONELEMENTS.pass).type(password);
+  cy.get(COMMONELEMENTS.submit).click();
+});
+
+Cypress.Commands.add('logout', () => { 
+  cy.get(COMMONELEMENTS.mainMenu).click();
+  cy.get(LOGOUTELEMENTS.logout).click({ force: true });
+  cy.get(LOGOUTELEMENTS.logoutValidation).should('have.text', 'Successfully Logged Out');
+});
+
+Cypress.Commands.add('signup', (email,password) => { 
+  cy.get(COMMONELEMENTS.login).click({ force: true });
+  cy.get(SIGNUPELEMENTS.hrefSignup).click({ force: true });
+  cy.get(COMMONELEMENTS.email).type(email);
+  cy.get(COMMONELEMENTS.pass).type(password);
+  cy.get(SIGNUPELEMENTS.validateLink).click();
+});

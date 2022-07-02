@@ -24,7 +24,7 @@ npm i
 - Test: 'Should go through Featured Pokemnon'  failing because there is no Dewott on there
 - Config files are separeted just for ilustration , on them you could create different runs based on envs or another configs like viewportWidth / viewportHeight and etc.
 - We can create webhooks or so to run pipeline remotely
-- Api tests in 2 different ways
+- 
 - Tests results in a link but it could be on slack channel or so 
 
 
@@ -42,9 +42,15 @@ npx cypress run
 
 Please to run on GitHub Action use this link:
 
-- https://github.com/luxurypresence/QA_Challenge/actions then go to my branch francisco.cypress.lux after branch is merged
+- 
 
+## Improvements
+
+- We could also have fixtures separate by env because sometimes the test data could be specific for some cases
+- To run in the pipeline we should create our own image to not load resources directly from docker 
+- 
 
 Test Results:
 
-- https://dashboard.cypress.io/projects/inu11r/
+- https://dashboard.cypress.io/invitation/ed28413c-efca-4bbf-8e9b-29797db3a1d5
+- https://dashboard.cypress.io/projects/4qkmxb/runs

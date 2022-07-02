@@ -1,6 +1,6 @@
 {
     "testFiles": "**/*.*spec.*",
-    "baseUrl": "https://staging-getcloudapp.comcom/us/",
+    "baseUrl": "http://localhost:8083/",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
     "projectId": "4qkmxb"

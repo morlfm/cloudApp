@@ -1,7 +1,7 @@
 {
     "testFiles": "**/*.*spec.*",
-    "baseUrl": "https://www.pokemon.com/us/",
+    "baseUrl": "https://www.getcloudapp.com",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
-    "projectId": "inu11r"
+    "projectId": "4qkmxb"
 }

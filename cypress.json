@@ -1,12 +1,8 @@
 {
-    "experimentalSourceRewriting": false,
-    "experimentalSessionSupport": true,
-    "chromeWebSecurity": false,
-    "watchForFileChanges": false,
-    "defaultCommandTimeout": 30000,
-    "video": false,
-    "testFiles": "**/*.*spec.*",
-    "viewportWidth": 1920,
-    "viewportHeight": 1080,
-    "projectId": "inu11r"
+  "baseUrl": "https://www.getcloudapp.com",
+  "defaultCommandTimeout": 3000,
+  "video": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "projectId": "4qkmxb"
   }

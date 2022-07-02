@@ -1,16 +1,21 @@
 {
     "dependencies": {
         "cypress": "^9.5.0",
-        "dotenv": "^10.0.0"
-    },
-    "devDependencies": {
-        "cypress-xpath": "^1.6.2",
-        "@shelex/cypress-allure-plugin": "^2.8.3",
-    "allure-commandline": "^2.13.0"
-
+        "cypress-file-upload": "^5.0.8",
+        "dotenv": "^10.0.0",
+        "eslint-plugin-cypress": "^2.12.1"
     },
     "name": "automation-functional-testing",
     "description": "Test automation functional using Cypress.",
     "version": "1.0.0",
-    "main": "index.js"
+    "main": "index.js",
+    "scripts": {
+        "test:run:local": "cypress run --env configFile=local",
+        "test:run:dev": "cypress run --env configFile=dev",
+        "test:run:stage": "cypress run --env configFile=stage",
+        "test:open:local": "cypress open --env configFile=local",
+        "test:open:dev": "cypress open --env configFile=dev",
+        "test:open:stage": "cypress open --env configFile=stage",
+        "run:ci": "--record --key 8a739225-a680-4dda-96d1-f7e2ace426d8"
+    }
 }

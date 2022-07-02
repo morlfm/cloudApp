@@ -1,4 +1,4 @@
-name: cypress luxury
+name: cypress cloud app 
 
 on:
   workflow_dispatch:
@@ -41,5 +41,5 @@ jobs:
       - name: Cypress run 
         uses: cypress-io/github-action@v2
         with: 
-          command: npx cypress run --config-file config/${{github.event.inputs.amb || env.DEFAULT_AMB}}.json --browser ${{github.event.inputs.browser || env.DEFAULT_BROWSER}} --record --key e07ed365-2b98-48f8-8298-de25382006c2
+          command: npx cypress run --config-file config/${{github.event.inputs.amb || env.DEFAULT_AMB}}.json --browser ${{github.event.inputs.browser || env.DEFAULT_BROWSER}} --record --key 8a739225-a680-4dda-96d1-f7e2ace426d
       
