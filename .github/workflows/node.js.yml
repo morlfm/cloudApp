@@ -12,7 +12,7 @@ on:
         required: false
         default: 'chrome'
   pull_request:
-    branches: [ main, release/develop ]
+    branches: [ master, release/develop ]
     
 env:
   DEFAULT_AMB: "production"
