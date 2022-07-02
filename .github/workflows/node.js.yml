@@ -12,7 +12,7 @@ on:
         required: false
         default: 'chrome'
   pull_request:
-    branches: [ master, release/develop ]
+    branches: [ main, release/develop ]
     
 env:
   DEFAULT_AMB: "production"
@@ -25,6 +25,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Save build folder
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          if-no-files-found: error
+          path: build    
       - name: Cypress install
         uses: cypress-io/github-action@v2
         with:
@@ -34,12 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.16.0-chrome90-ff88
     needs: install
-    strategy: 
-      fail-fast: false
     steps:
       - uses: actions/checkout@v2
       - name: Cypress run 
         uses: cypress-io/github-action@v2
         with: 
-          command: npx cypress run --config-file config/${{github.event.inputs.amb || env.DEFAULT_AMB}}.json --browser ${{github.event.inputs.browser || env.DEFAULT_BROWSER}} --record --key 8a739225-a680-4dda-96d1-f7e2ace426d
+          command: npx cypress run --config-file config/${{github.event.inputs.amb || env.DEFAULT_AMB}}.json --browser ${{github.event.inputs.browser || env.DEFAULT_BROWSER}} --record --key 8a739225-a680-4dda-96d1-f7e2ace426d8
       
