@@ -4,5 +4,7 @@
   "video": false,
   "viewportWidth": 1920,
   "viewportHeight": 1080,
-  "projectId": "4qkmxb"
+  "projectId": "4qkmxb",
+  "projectName": "CloudApp",
+  "watchForFileChanges": false
   }

@@ -1,5 +1,5 @@
 import commons from '../support/context/commons';
-import { SETTINGSELEMENTS } from '../support/context/commons/elements';
+import { COMMONELEMENTS, INVALIDINPUTELEMENTS, SETTINGSELEMENTS } from '../support/context/commons/elements';
 
 describe('Settings', () => {
 
@@ -7,19 +7,26 @@ describe('Settings', () => {
     commons.visitPage('/');
   }); 
 
-  it.only('Should update my avatar', () => {
+  it('Should update my avatar', () => {
     const p = 'avatar.png';
 
     cy.login('testAutomation2@belicloud.net', '@@Test123');
+    cy.get(COMMONELEMENTS.mainMenu).click();
     cy.get(SETTINGSELEMENTS.settings).click();
-    cy.get(SETTINGSELEMENTS.avatar).click();
-    // upload image 
-    cy.get('#file-upload').attachFile(p);  
-    cy.get('#file-submit').click();
-    cy.get('#uploaded-files').contains('Picture');
+    cy.get(SETTINGSELEMENTS.avatar).attachFile(p);  
+    cy.get(SETTINGSELEMENTS.uploadFile).click();
+    cy.get(SETTINGSELEMENTS.validateAvatarUpload).should('contain.text', 'Account updated');
   });
 
-  it('Should not update my avatar as per image size 500x 500 px', () => {
+  it.only('Should not update my avatar as per image size 500x 500 px', () => {
+    const p = 'avatarErrorSize.png';
 
+    cy.login('testAutomation2@belicloud.net', '@@Test123');
+    cy.get(COMMONELEMENTS.mainMenu).click();
+    cy.get(SETTINGSELEMENTS.settings).click();
+    cy.get(SETTINGSELEMENTS.avatar).attachFile(p);  
+    cy.get(SETTINGSELEMENTS.uploadFile).click();
+    cy.get(INVALIDINPUTELEMENTS.errorAlert).should(
+      'have.text', 'Avatar Max size is 500x500px');
   });
 });

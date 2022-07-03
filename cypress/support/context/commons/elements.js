@@ -4,7 +4,8 @@ export const COMMONELEMENTS = {
   mainMenu: '#main-menu',
   email: '#email',
   pass: '#password',
-  submit: '[data-testid="regular-login-submit"]'
+  submit: '[data-testid="regular-login-submit"]',
+  validateLogin: '[class="alert alert-message"]',
 };
 
 export const LOGOUTELEMENTS  =  {
@@ -22,14 +23,14 @@ export const SIGNUPELEMENTS = {
 
 export const SETTINGSELEMENTS = {
 
-  settings: '[class="dropdown-item"]',
-  avatar: '#user_avatar'
+  settings: '[data-testid="dropdown-link-settings"]',
+  avatar: '#user_avatar',
+  uploadFile: '[data-testid="onboarding-submit-about-you-form"]',
+  validateAvatarUpload: '[class="flash alert alert-success"]'
 };
 
 export const INVALIDINPUTELEMENTS = {
 
   errorAlert: '.alert-danger',
   error: '[class="alert alert-danger"]',
-  errorNonUser: '[class="alert alert-danger"]'
-
 };

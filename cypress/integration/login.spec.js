@@ -11,14 +11,14 @@ describe('Login', () => {
     commons.visitPage('/');
   });
 
-  it('Should login and logout successfully', () => {
+  it.only('Should login and logout successfully', () => {
     cy.login('testAutomation2@belicloud.net', '@@Test123');
     cy.logout();
   });
 
   it('Should not login with an non existing usser', () => {
     cy.login(testEmail, '@@Test123');
-    cy.get(INVALIDINPUTELEMENTS.errorNonUser).should('have.text',errorMessage);
+    cy.get(INVALIDINPUTELEMENTS.error).should('have.text',errorMessage);
   });
     
   it('Should not login successfully as for bad credentials', () => {
