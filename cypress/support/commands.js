@@ -6,7 +6,6 @@ Cypress.Commands.add('login', (email, password) => {
   cy.get(COMMONELEMENTS.email).type(email);
   cy.get(COMMONELEMENTS.pass).type(password);
   cy.get(COMMONELEMENTS.submit).click();
-  cy.get(COMMONELEMENTS.validateLogin).should('contain.text', 'Welcome');
 });
 
 Cypress.Commands.add('logout', () => { 

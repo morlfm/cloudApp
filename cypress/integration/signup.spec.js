@@ -1,6 +1,6 @@
-import commons from '../support/context/commons';
-import { GENERATEEMAIL } from '../support/context/commons/utils';
-import { COMMONELEMENTS, INVALIDINPUTELEMENTS, SIGNUPELEMENTS }
+import commons from '../support/context/commons/utils';
+import { GENERATEEMAIL} from '../support/context/commons/utils';
+import { INVALIDINPUTELEMENTS, SIGNUPELEMENTS }
   from "../support/context/commons/elements";
 
 describe('Signup', () => {

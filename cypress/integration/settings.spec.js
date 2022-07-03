@@ -1,5 +1,6 @@
-import commons from '../support/context/commons';
-import { COMMONELEMENTS, INVALIDINPUTELEMENTS, SETTINGSELEMENTS } from '../support/context/commons/elements';
+import commons from '../support/context/commons/utils';
+import { COMMONELEMENTS, INVALIDINPUTELEMENTS, SETTINGSELEMENTS }
+  from '../support/context/commons/elements';
 
 describe('Settings', () => {
 
@@ -11,15 +12,16 @@ describe('Settings', () => {
     const a = 'avatar.png';
 
     cy.login('testAutomation2@belicloud.net', '@@Test123');
-    cy.get(COMMONELEMENTS.mainMenu).click();
+    cy.get(COMMONELEMENTS.mainMenu).click({force:true});
     cy.get(SETTINGSELEMENTS.settings).click();
     cy.get(SETTINGSELEMENTS.avatar).attachFile(a);  
     cy.get(SETTINGSELEMENTS.uploadFile).click();
-    cy.get(SETTINGSELEMENTS.validateAvatarUpload).should('contain.text', 'Account updated');
+    cy.get(SETTINGSELEMENTS.validateAvatarUpload).should(
+      'contain.text', 'Account updated');
   });
 
   it('Should not update my avatar as per image size 500x 500 px', () => {
-    const e = 'avatarErrorSize.png';
+    const e = 'errorSize.png';
 
     cy.login('testAutomation2@belicloud.net', '@@Test123');
     cy.get(COMMONELEMENTS.mainMenu).click();

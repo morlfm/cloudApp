@@ -1,4 +1,4 @@
-import  { INVALIDINPUTELEMENTS } from '../support/context/commons/elements';
+import  { INVALIDINPUTELEMENTS, COMMONELEMENTS } from '../support/context/commons/elements';
 import { GENERATEEMAIL } from '../support/context/commons/utils';
 import commons from '../support/context/commons/utils';
 
@@ -11,8 +11,9 @@ describe('Login', () => {
     commons.visitPage('/');
   });
 
-  it.only('Should login and logout successfully', () => {
+  it('Should login and logout successfully', () => {
     cy.login('testAutomation2@belicloud.net', '@@Test123');
+    cy.get(COMMONELEMENTS.validateLogin).should('contain.text', 'Welcome');
     cy.logout();
   });
 

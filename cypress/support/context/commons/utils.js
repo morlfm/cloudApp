@@ -1,11 +1,10 @@
-class Commons { 
 
+class Commons { 
+  page = 'https://share.getcloudapp.com';
+  
   visitPage(page) { 
     cy.visit(page);
     cy.url().should('include', page);
-  }
-  acceptCookies() {
-    cy.get(el.cookies).click();
   }
 } 
 
